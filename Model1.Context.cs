@@ -17,7 +17,7 @@ namespace Sklad
     {
         private static Stas_bdEntities2 _context;
         public Stas_bdEntities2()
-            : base("name=Stas_bdEntities2")
+            : base("name=Stas_bdEntities2 ")
         {
         }
         public static Stas_bdEntities2 GetContext()

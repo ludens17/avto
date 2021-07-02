@@ -41,11 +41,7 @@ namespace Sklad
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-           
-            main.Navigate(new helppage());
-        }
+      
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
@@ -66,10 +62,6 @@ namespace Sklad
             main.Navigate(new postavka());
         }
 
-        private void Button_Click_5(object sender, RoutedEventArgs e)
-        {
-           
-            main.Navigate(new adminpage());
-        }
+       
     }
 }

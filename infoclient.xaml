@@ -25,9 +25,9 @@
 
             <DataGrid.Columns >
                 <DataGridTextColumn Header="№" Width="70"  
-                                        Binding="{Binding Почтовый_ящик}">
-                    
-                    
+                                   Binding="{Binding  Код_клиент}">
+
+
                 </DataGridTextColumn>
                 <DataGridTextColumn Header="Фамилия" Width="70"  Binding="{Binding Фамилия}" ></DataGridTextColumn>
                 <DataGridTextColumn Header="Имя" Width="70"  Binding="{Binding Имя}"></DataGridTextColumn>
