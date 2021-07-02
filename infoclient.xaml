@@ -1,0 +1,39 @@
+﻿<Page x:Class="Sklad.infoclient"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sklad"
+      mc:Ignorable="d" 
+      d:DesignHeight="569" d:DesignWidth="642"
+      Title="Информация о клиентах">
+
+    <Grid>
+        <Button 
+            HorizontalAlignment="Left"
+            Margin="10,10,0,0"
+           Click="Button_Click"
+            ToolTip="Регистрация если клиент отсутствует в базе данных"
+            VerticalAlignment="Top"
+            Width="175" Height="25">
+            <TextBlock 
+                Text="Регистрация клиента"
+                TextWrapping="Wrap" />
+        </Button>
+        <DataGrid 
+            Margin="10,40,10,10" AutoGenerateColumns="False">
+
+            <DataGrid.Columns >
+                <DataGridTemplateColumn Header="№" Width="70"></DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Фамилия" Width="70"></DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Имя" Width="70"></DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Отчестов" Width="75"></DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Телефон" Width="140"></DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Адрес" Width="140"></DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="серия паспорта" Width="140"></DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="номер паспорта" Width="*"></DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Page>

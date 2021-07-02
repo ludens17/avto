@@ -1,0 +1,99 @@
+﻿<Page x:Class="Sklad.helppage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sklad"
+      mc:Ignorable="d" 
+      d:DesignHeight="569" d:DesignWidth="642"
+      Title="Справка">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid>
+            <Border Background="Bisque"/>
+        </Grid>
+
+
+
+        <Image
+                    
+                    ToolTip="Нажмите сюда что бы ознакомиться с исходниками"
+                   
+                    VerticalAlignment="Top"
+                    Source="/Resources/Octocat.png"
+                MouseDown="Image_MouseDown" Height="100" Margin="10,170,0,0" HorizontalAlignment="Left" Width="105"  />
+
+        <Image 
+                HorizontalAlignment="Left"
+                Height="102"
+                Margin="75,5,0,0"
+                VerticalAlignment="Top"
+                Width="75"
+                Source="/Resources/Kurisu_Makise(102x143).png"/>
+
+
+
+        <TextBlock
+                HorizontalAlignment="Left"  
+                TextWrapping="Wrap"
+                Text="Курсовой проект студента группы 531 Тихонкова Михаила Дмитриевича"          
+                VerticalAlignment="Top"
+                Margin="10,112,0,0" Width="215"/>
+        <TextBlock  
+                TextWrapping="Wrap"
+                Text="Помощь проекту оказали: "
+                Margin="0,12,10,0" FontSize="20" TextAlignment="Center" HorizontalAlignment="Right" Width="311" Height="53" VerticalAlignment="Top">
+
+        </TextBlock>
+
+        <Image
+                    ToolTip="Связь с разработчиком"
+                    Margin="115,180,0,0"
+                    Source="Resources/Logo.png" 
+                MouseDown="Image_MouseDown_1"
+                HorizontalAlignment="Left"
+                Width="80"
+                Height="90"
+                VerticalAlignment="Top" />
+        <Image 
+                    ToolTip="Плетнёв Денис Олегович"
+                    Source="Resources/ogimage-1024x623.png"
+                RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="240" Margin="0,83,42,0" Height="167" VerticalAlignment="Top">
+
+        </Image>
+
+        <TextBlock  
+                    TextWrapping="Wrap"
+                    Text="Помощь с кодом программы:"
+                   Margin="0,257,63,0" HorizontalAlignment="Right" Width="179" Height="37" VerticalAlignment="Top">
+
+        </TextBlock>
+        <Image
+                    Height="125"
+                    ToolTip="Плетнёва Евгения Германовна"
+                    Margin="0,280,102,0"
+                    VerticalAlignment="Top"
+                    Source="/Resources/adc9edfcaaa0e1163069fbc90189f1b1.jpg" 
+                    RenderTransformOrigin="0.558,0.71"
+                Stretch="Fill"
+                HorizontalAlignment="Right"
+                Width="140">
+
+        </Image>
+
+
+        <TextBlock  
+                    TextWrapping="Wrap"
+                    Text="Консультирование по построению базы данных:" 
+                    RenderTransformOrigin="0.5,0.5"
+                    Margin="0,50,42,0" 
+                    Height="60"
+                    VerticalAlignment="Top" HorizontalAlignment="Right" Width="240">
+
+        </TextBlock>
+    </Grid>
+</Page>
