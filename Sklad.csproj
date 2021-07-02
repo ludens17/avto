@@ -96,6 +96,9 @@
     <Compile Include="postavka.xaml.cs">
       <DependentUpon>postavka.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RegAvto.xaml.cs">
+      <DependentUpon>RegAvto.xaml</DependentUpon>
+    </Compile>
     <Compile Include="regclient.xaml.cs">
       <DependentUpon>regclient.xaml</DependentUpon>
     </Compile>
@@ -152,6 +155,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="postavka.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegAvto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
