@@ -27,6 +27,28 @@ namespace Sklad
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                int stoim = Convert.ToInt32(hueta.Text);
+                string name = innbox.Text;
+                string ed = phonebox.Text;
+                int kol = Convert.ToInt32(kolihestvo.Text);
+                string pizda = addressbox.Text;
+
+                int es = 1;
+
+                sl.Select($@"INSERT INTO товар ([кол-во],ЕдИзм,СтоимЗаЕд,наличие,Наименование) VALUES ('{kol}','{ed}','{stoim}', '{es}','{name}')");
+                stoim = 0;
+                name = null;
+                ed = null;
+                kol = 0;
+
+                MessageBox.Show("Товар добавлен в базу", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ошибка добавления данных в базу", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
 
         }
     }

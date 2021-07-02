@@ -9,36 +9,36 @@
       Title="RegAvto">
 
     <Grid>
-        <Viewbox Height="24" HorizontalAlignment="Left" Width="110" VerticalAlignment="Top" Margin="40,23,0,0" Stretch="UniformToFill">
+        <Viewbox Height="24" HorizontalAlignment="Left" Width="120" VerticalAlignment="Top" Margin="30,23,0,0" Stretch="UniformToFill">
             <Label  >
                 <TextBlock Text="Марка автомобиля" Width="115" TextAlignment="Center"/>
             </Label>
 
         </Viewbox>
 
-        <TextBox x:Name="innbox" Margin="0,140,362,0" Height="20" VerticalAlignment="Top"    HorizontalAlignment="Right" Width="278"/>
+        <TextBox x:Name="innbox" Margin="160,140,0,0" Height="20" VerticalAlignment="Top"    HorizontalAlignment="Left" Width="278"/>
 
-        <TextBox x:Name="addressbox" Margin="0,100,362,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="278"/>
-        <TextBox x:Name="namebox" Margin="0,20,362,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="278"/>
-        <TextBox x:Name="phonebox" Margin="0,60,362,0" Height="20" VerticalAlignment="Top"  IsEnabled="True" IsReadOnly="False" HorizontalAlignment="Right" Width="278"/>
+        <TextBox x:Name="addressbox" Margin="160,100,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="278"/>
+        <TextBox x:Name="namebox" Margin="160,20,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="278"/>
+        <TextBox x:Name="phonebox" Margin="160,60,0,0" Height="20" VerticalAlignment="Top"  IsEnabled="True" IsReadOnly="False" HorizontalAlignment="Left" Width="278"/>
 
 
-        <TextBox  Margin="0,180,362,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="278"/>
 
-        <Viewbox Height="24" HorizontalAlignment="Left" Width="105" VerticalAlignment="Top" Margin="50,63,0,0" Stretch="UniformToFill">
+
+        <Viewbox Height="24" HorizontalAlignment="Left" Width="115" VerticalAlignment="Top" Margin="35,63,0,0" Stretch="UniformToFill">
             <Label  >
                 <TextBlock Text="модель автомобиля" Width="115" TextAlignment="Center"/>
             </Label>
 
         </Viewbox>
-        <Viewbox Height="24" HorizontalAlignment="Left" Width="120" VerticalAlignment="Top" Margin="35,103,0,0" Stretch="UniformToFill">
+        <Viewbox Height="24" HorizontalAlignment="Left" Width="80" VerticalAlignment="Top" Margin="55,103,0,0" Stretch="UniformToFill">
 
             <Label  >
                 <TextBlock Text="Кузов"  TextAlignment="Center" Width="120"/>
             </Label>
         </Viewbox>
 
-        <Viewbox Height="24" HorizontalAlignment="Left" Width="95" VerticalAlignment="Top" Margin="65,143,0,0">
+        <Viewbox Height="24" HorizontalAlignment="Left" Width="85" VerticalAlignment="Top" Margin="62,140,0,0">
             <Label >
                 <TextBlock 
                 Text="Дата Выпуска" TextAlignment="Center"/>
@@ -46,26 +46,22 @@
 
         </Viewbox>
 
-        <Viewbox Margin="35,186,0,0" Height="20" HorizontalAlignment="Left" Width="120" VerticalAlignment="Top" Stretch="Fill">
 
-            <Label>
-                <TextBlock Text="Наличие"  TextAlignment="Center"></TextBlock>
-            </Label>
-        </Viewbox >
+
         <Button Margin="160,300,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" Click="Button_Click">
             <Viewbox Height="20">
                 <TextBlock Text="Регистрация"></TextBlock>
             </Viewbox>
         </Button>
 
-        <TextBox Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="0,226,362,0" x:Name="kolihestvo" HorizontalAlignment="Right" Width="278"/>
-        <Viewbox HorizontalAlignment="Left" Height="25" Margin="50,224,0,0" VerticalAlignment="Top" Width="100">
+        <TextBox Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="160,184,0,0" x:Name="kolihestvo" HorizontalAlignment="Left" Width="278"/>
+        <Viewbox HorizontalAlignment="Left" Height="25" Margin="74,184,0,0" VerticalAlignment="Top" Width="73">
             <Label>
                 <TextBlock Text="количество" TextAlignment="Center"></TextBlock>
             </Label>
         </Viewbox>
-        <TextBox HorizontalAlignment="Right" Height="23" Margin="0,268,362,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="278" x:Name="hueta"/>
-        <Viewbox HorizontalAlignment="Left" Height="23" Margin="50,268,0,0" VerticalAlignment="Top" Width="100">
+        <TextBox Height="23" Margin="160,224,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" x:Name="hueta" HorizontalAlignment="Left" Width="278"/>
+        <Viewbox HorizontalAlignment="Left" Height="23" Margin="104,224,0,0" VerticalAlignment="Top" Width="31">
             <Label>
                 <TextBlock Text="Цена" TextAlignment="Center"></TextBlock>
             </Label>

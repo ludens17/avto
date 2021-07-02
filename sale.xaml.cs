@@ -25,8 +25,10 @@ namespace Sklad
             InitializeComponent();
         }
 
-        
-
-       
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.GetWindow(openpage.MainFrame).Title = "Оптовый склад->Клиенты->Регистрация клиента";
+            openpage.MainFrame.Navigate(new RegAvto());
+        }
     }
 }
