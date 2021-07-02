@@ -13,13 +13,21 @@ namespace Sklad
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Stas_bdEntities : DbContext
+    public partial class Stas_bdEntities2 : DbContext
     {
-        public Stas_bdEntities()
-            : base("name=Stas_bdEntities")
+        private static Stas_bdEntities2 _context;
+        public Stas_bdEntities2()
+            : base("name=Stas_bdEntities2")
         {
         }
-    
+        public static Stas_bdEntities2 GetContext()
+        {
+            if (_context == null)
+                _context = new Stas_bdEntities2();
+            return _context;
+
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

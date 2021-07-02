@@ -46,13 +46,14 @@ namespace Sklad
                         string adres = Convert.ToString(addressbox.Text);
                         string inn = Convert.ToString(innbox.Text);
                         string mail = Convert.ToString(sas1.Text);
+
                         Dota sl = new Dota();
-                        sl.Select($@"INSERT INTO Поставщик ([Юредический_адрес],Телефон,[Почтовый_ящик],[Дата_поставки],ИНН [Название_Компании]) VALUES ('{name}', '{phone}','{adres}','{inn}','{mail}')");
+                        sl.Select($@"INSERT INTO Поставщик ([Юредический адрес],Телефон,[Почтовый ящик],ИНН ,[Название Компании]) VALUES ('{adres}', '{phone}','{mail}','{inn}','{name}')");
                         MainWindow.GetWindow(openpage.MainFrame).Title = "Оптовый склад->Клиенты";
                         openpage.MainFrame.Navigate(new infoclient());
 
                     }
-                    catch (Exception)
+                   catch (Exception)
                     {
 
                         MessageBox.Show("Ошибка добавления данных", "обратитесь к разработчику", MessageBoxButton.OK);
@@ -75,7 +76,7 @@ namespace Sklad
                          .Text
                          .Where
                          (ch =>
-                            (ch >= '0' && ch <= '9')
+                            ch >= '0' && ch <= '9'
                          )
                          .ToArray()
                     );

@@ -8,7 +8,7 @@
       d:DesignHeight="569" d:DesignWidth="642"
       Title="Информация о клиентах">
 
-    <Grid>
+    <Grid >
         <Button 
             HorizontalAlignment="Left"
             Margin="10,10,0,0"
@@ -20,18 +20,22 @@
                 Text="Регистрация клиента"
                 TextWrapping="Wrap" />
         </Button>
-        <DataGrid 
+        <DataGrid x:Name="Nord"
             Margin="10,40,10,10" AutoGenerateColumns="False">
 
             <DataGrid.Columns >
-                <DataGridTemplateColumn Header="№" Width="70"></DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Фамилия" Width="70"></DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Имя" Width="70"></DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Отчестов" Width="75"></DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Телефон" Width="140"></DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Адрес" Width="140"></DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="серия паспорта" Width="140"></DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="номер паспорта" Width="*"></DataGridTemplateColumn>
+                <DataGridTextColumn Header="№" Width="70"  
+                                        Binding="{Binding Почтовый_ящик}">
+                    
+                    
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Фамилия" Width="70"  Binding="{Binding Фамилия}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Имя" Width="70"  Binding="{Binding Имя}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Отчестов" Width="75" Binding="{Binding Отчество}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Телефон" Width="140" Binding="{Binding Телефон}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Адрес" Width="140" Binding="{Binding Адрес}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="серия паспорта" Width="140" Binding="{Binding Серия_паспорта}"></DataGridTextColumn>
+                <DataGridTextColumn Header="номер паспорта" Width="*" Binding="{Binding Номер_паспорта}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
 

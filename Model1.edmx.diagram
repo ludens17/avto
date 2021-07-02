@@ -4,15 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4cc5fcce15fb4530a2b398ad0a383569" Name="Diagram1">
+      <Diagram DiagramId="5357c105678a408aa3009731d1eecfa2" Name="Diagram1">
         <EntityTypeShape EntityType="Stas_bdModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Stas_bdModel.автомобиль" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="Stas_bdModel.Клиент" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
         <EntityTypeShape EntityType="Stas_bdModel.Комплектация1" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="Stas_bdModel.Менеджер" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Stas_bdModel.Поставщик" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Stas_bdModel.Поставщик" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Stas_bdModel.Продажа" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Stas_bdModel.Форма_Оплаты" Width="3.125" PointX="7.5" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Stas_bdModel.Форма_Оплаты" Width="1.5" PointX="7.5" PointY="1.625" IsExpanded="true" />
         <AssociationConnector Association="Stas_bdModel.FK_автомобиль_Комплектация1" ManuallyRouted="false" />
         <AssociationConnector Association="Stas_bdModel.FK_автомобиль_Поставщик" ManuallyRouted="false" />
         <AssociationConnector Association="Stas_bdModel.FK_Продажа_автомобиль" ManuallyRouted="false" />

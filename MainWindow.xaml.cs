@@ -43,32 +43,32 @@ namespace Sklad
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MainWindow.GetWindow(main).Title = "Оптовый склад->О программе";
+           
             main.Navigate(new helppage());
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            MainWindow.GetWindow(main).Title = "Оптовый склад->Торговля";
+            
             main.Navigate(new sale());
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            MainWindow.GetWindow(main).Title = "Оптовый склад->Клиенты";
+            
             main.Navigate(new infoclient());
             
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            MainWindow.GetWindow(main).Title = "Оптовый склад->Номенклатура";
+            
             main.Navigate(new postavka());
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            MainWindow.GetWindow(main).Title = "Оптовый склад->Администрирование";
+           
             main.Navigate(new adminpage());
         }
     }

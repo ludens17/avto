@@ -23,49 +23,43 @@
                 <DataGridTextColumn 
                     IsReadOnly="True"
                     Header="№"
-                                    Binding="{Binding Name}"
+                                    Binding="{Binding Код_Автомобиля}"
                                     Width="100">
 
                 </DataGridTextColumn>
                 <DataGridTextColumn 
                     IsReadOnly="True"
                     Header="Марка"
-                                    Binding="{Binding Name}"
+                                    Binding="{Binding Марка_автомобиля}"
                                     Width="*">
 
                 </DataGridTextColumn>
                 <DataGridTextColumn 
                     IsReadOnly="True"
                     Header="модель"
-                                    Binding="{Binding Name}"
+                                    Binding="{Binding Модель_автомобиля}"
                                     Width="100">
 
                 </DataGridTextColumn>
                 <DataGridTextColumn 
                     IsReadOnly="True"
                     Header="наличие"
-                                    Binding="{Binding Name}"
+                                    Binding="{Binding Наличие}"
                                     Width="70">
 
                 </DataGridTextColumn>
-                <DataGridTemplateColumn Header="количество" Width="70">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <CheckBox >
+                <DataGridTextColumn Header="количество" Binding="{Binding Количество}" Width="70">
+                   
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="цена" Width="70" Binding="{Binding цена}" >
+                   
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Кузов" Width="70" Binding="{Binding Кузов}" >
 
-                            </CheckBox>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="цена" Width="70">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <CheckBox x:Name="chktovar"  >
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="дата выпуска" Width="70" Binding="{Binding Дата_выпуска}" >
 
-                            </CheckBox>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
+                </DataGridTextColumn>
             </DataGrid.Columns>
 
 

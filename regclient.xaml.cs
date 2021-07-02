@@ -36,8 +36,8 @@ namespace Sklad
           
 
 
-                try
-                {
+                //try
+              //  {
                     string name = Convert.ToString(namebox.Text);
                     string phone = Convert.ToString(phonebox.Text);
                     string adres = Convert.ToString(addressbox.Text);
@@ -46,16 +46,16 @@ namespace Sklad
                     int govna = Convert.ToInt32(ton.Text);
                     string dura = Convert.ToString(tan.Text);
                     Dota sl = new Dota();
-                    sl.Select($@"INSERT INTO Клиент (Фамилия,Имя,Отчество,[Номер_паспорта],[Серия_паспорта],Телефон,Адрес) VALUES ('{name}', '{phone}','{adres}','{inn}','{mail}','{govna}','{dura}')");
+                    sl.Select($@"INSERT INTO Клиент (Фамилия,Имя,Отчество,[Номер паспорта],[Серия паспорта],Телефон,Адрес) VALUES ('{name}', '{phone}','{adres}','{inn}','{mail}','{govna}','{dura}')");
                     MainWindow.GetWindow(openpage.MainFrame).Title = "Оптовый склад->Клиенты";
                     openpage.MainFrame.Navigate(new infoclient());
 
-                }
-                catch (Exception)
-                {
+               // }
+             //   catch (Exception)
+               // {
 
-                    MessageBox.Show("Ошибка добавления данных", "обратитесь к разработчику", MessageBoxButton.OK);
-                }
+                   // MessageBox.Show("Ошибка добавления данных", "обратитесь к разработчику", MessageBoxButton.OK);
+               // }
 
 
 

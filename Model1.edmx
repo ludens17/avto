@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Хранилище Stas_bdModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище Stas_bdModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -39,7 +39,7 @@
           <Property Name="Отчество" Type="varchar" MaxLength="50" />
           <Property Name="Номер паспорта" Type="varchar" MaxLength="6" />
           <Property Name="Серия паспорта" Type="varchar" MaxLength="4" />
-          <Property Name="Телефон" Type="varchar" MaxLength="50" />
+          <Property Name="Телефон" Type="int" />
           <Property Name="Адрес" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Комплектация1">
@@ -73,10 +73,9 @@
           </Key>
           <Property Name="Код поставщика" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Юредический адрес" Type="varchar" MaxLength="50" />
-          <Property Name="Телефон" Type="bigint" />
+          <Property Name="Телефон" Type="varchar" MaxLength="50" />
           <Property Name="Почтовый ящик" Type="varchar" MaxLength="50" />
-          <Property Name="Дата поставки" Type="datetime" />
-          <Property Name="ИНН" Type="int" />
+          <Property Name="ИНН" Type="varchar" MaxLength="50" />
           <Property Name="Название Компании" Type="nchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Продажа">
@@ -205,7 +204,8 @@
             <End Role="Форма Оплаты" EntitySet="Форма Оплаты" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Stas_bdModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -246,7 +246,7 @@
           <Property Name="Отчество" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Номер_паспорта" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
           <Property Name="Серия_паспорта" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
-          <Property Name="Телефон" Type="Int64" />
+          <Property Name="Телефон" Type="Int32" />
           <Property Name="Адрес" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Продажа" Relationship="Self.FK_Продажа_Клиент" FromRole="Клиент" ToRole="Продажа" />
         </EntityType>
@@ -283,10 +283,9 @@
           </Key>
           <Property Name="Код_поставщика" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Юредический_адрес" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Телефон" Type="Int64" />
+          <Property Name="Телефон" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Почтовый_ящик" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Дата_поставки" Type="DateTime" Precision="3" />
-          <Property Name="ИНН" Type="Int32" />
+          <Property Name="ИНН" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Название_Компании" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="автомобиль" Relationship="Self.FK_автомобиль_Поставщик" FromRole="Поставщик" ToRole="автомобиль" />
         </EntityType>
@@ -387,7 +386,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Stas_bdEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Stas_bdEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="автомобиль" EntityType="Self.автомобиль" />
           <EntitySet Name="Клиент" EntityType="Self.Клиент" />
@@ -426,7 +425,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище Stas_bdModelContainer" CdmEntityContainer="Stas_bdEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище Stas_bdModelContainer" CdmEntityContainer="Stas_bdEntities2">
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="Stas_bdModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
@@ -501,7 +500,6 @@
                 <ScalarProperty Name="Юредический_адрес" ColumnName="Юредический адрес" />
                 <ScalarProperty Name="Телефон" ColumnName="Телефон" />
                 <ScalarProperty Name="Почтовый_ящик" ColumnName="Почтовый ящик" />
-                <ScalarProperty Name="Дата_поставки" ColumnName="Дата поставки" />
                 <ScalarProperty Name="ИНН" ColumnName="ИНН" />
                 <ScalarProperty Name="Название_Компании" ColumnName="Название Компании" />
               </MappingFragment>

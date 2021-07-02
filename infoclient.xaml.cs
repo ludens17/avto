@@ -23,11 +23,13 @@ namespace Sklad
         public infoclient()
         {
             InitializeComponent();
+            Nord.ItemsSource = Stas_bdEntities2.GetContext().Клиент.ToList();
+               // sobaka.ItemsSource = Stas_bdEntities1.GetContext().Поставщик.ToList();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.GetWindow(openpage.MainFrame).Title = "Оптовый склад->Клиенты->Регистрация клиента";
+            
             openpage.MainFrame.Navigate(new regclient());
         }
     }

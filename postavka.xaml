@@ -26,40 +26,39 @@
                 <DataGridTextColumn 
                     IsReadOnly="True"
                     Header="№"
-                                    Binding="{Binding Name}"
+                                    Binding="{Binding Код_поставщика }"
                                     Width="100">
 
                 </DataGridTextColumn>
                 <DataGridTextColumn 
                     IsReadOnly="True"
                     Header="Юредический адрес"
-                                    Binding="{Binding Name}"
+                                    Binding="{Binding Юредический_адрес }"
                                     Width="*">
 
                 </DataGridTextColumn>
                 <DataGridTextColumn 
                     IsReadOnly="True"
                     Header="телефон"
-                                    Binding="{Binding Name}"
+                                    Binding="{Binding Телефон}"
                                     Width="100">
 
                 </DataGridTextColumn>
                 <DataGridTextColumn 
                     IsReadOnly="True"
                     Header="Почтовый ящик"
-                                    Binding="{Binding Name}"
+                                    Binding="{Binding Почтовый_ящик}"
                                     Width="70">
 
                 </DataGridTextColumn>
-                <DataGridTemplateColumn Header="дата поставки" Width="70">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <CheckBox >
+                <DataGridTextColumn 
+                    IsReadOnly="True"
+                    Header="ИНН"
+                                    Binding="{Binding ИНН}"
+                                    Width="70">
 
-                            </CheckBox>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
+                </DataGridTextColumn>
+                
                 
             </DataGrid.Columns>
 

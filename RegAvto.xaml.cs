@@ -28,30 +28,30 @@ namespace Sklad
         private void Button_Click(object sender, RoutedEventArgs e)
         {
          
-            try
-            {
+           // try
+         //   {
                 Dota sl = new Dota();
-                int stoim = Convert.ToInt32(hueta.Text);
+                double stoim = Convert.ToDouble(hueta.Text);
                 string name = innbox.Text;
                 string ed = phonebox.Text;
                 int kol = Convert.ToInt32(kolihestvo.Text);
-                string pizda = addressbox.Text;
+                string pozda = addressbox.Text;
                 string noda = namebox.Text;
                 DateTime datakak = Convert.ToDateTime(innbox.Text);
                 int es = 1;
 
-                sl.Select($@"INSERT INTO автомобиль(Марка_автомобиля, Модель_автомобиля, Кузов, Дата_выпуска,цена,Количество,Наличие) VALUES('{noda}', '{ed}', '{pizda}', '{name}', '{kol}', '{stoim}', '{es})");
-                stoim = 0;
+                sl.Select($@"INSERT INTO автомобиль([Марка автомобиля], [Модель автомобиля], Кузов, [Дата выпуска],Количество,цена,Наличие) VALUES ('{noda}', '{ed}', '{pozda}', '{datakak}', '{name}', '{kol}', '{stoim}', '{es}')");
+                stoim =0;
                 name = null;
                 ed = null;
                 kol = 0;
 
-                MessageBox.Show("Товар добавлен в базу", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ошибка добавления данных в базу", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
+            //    MessageBox.Show("Товар добавлен в базу", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+           // }
+           // catch (Exception)
+           // {
+             //   MessageBox.Show("Ошибка добавления данных в базу", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+           // }
 
         }
     }

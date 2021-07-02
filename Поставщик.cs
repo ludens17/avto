@@ -22,10 +22,9 @@ namespace Sklad
     
         public int Код_поставщика { get; set; }
         public string Юредический_адрес { get; set; }
-        public Nullable<long> Телефон { get; set; }
+        public string Телефон { get; set; }
         public string Почтовый_ящик { get; set; }
-        public Nullable<System.DateTime> Дата_поставки { get; set; }
-        public Nullable<int> ИНН { get; set; }
+        public string ИНН { get; set; }
         public string Название_Компании { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -26,7 +26,7 @@ namespace Sklad
         public string Отчество { get; set; }
         public string Номер_паспорта { get; set; }
         public string Серия_паспорта { get; set; }
-        public Nullable<long> Телефон { get; set; }
+        public Nullable<int> Телефон { get; set; }
         public string Адрес { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

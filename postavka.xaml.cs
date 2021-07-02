@@ -20,15 +20,24 @@ namespace Sklad
     /// </summary>
     public partial class postavka : Page
     {
+         
         public postavka()
         {
             InitializeComponent();
+            sobaka.ItemsSource = Stas_bdEntities2.GetContext().Поставщик.ToList();
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.GetWindow(openpage.MainFrame).Title = "Оптовый склад->Клиенты->Регистрация клиента";
+       
+           
             openpage.MainFrame.Navigate(new Page1());
+
         }
+
+        
     }
+
+
 }
