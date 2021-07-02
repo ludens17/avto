@@ -17,14 +17,14 @@
 
             </Viewbox>
 
-            <TextBox x:Name="innbox" Margin="160,140,362,0" Height="20" VerticalAlignment="Top"  />
+            <TextBox x:Name="innbox" Margin="160,140,362,0" Height="20" VerticalAlignment="Top" TextChanged="innbox_TextChanged" />
 
             <TextBox x:Name="addressbox" Margin="160,100,362,0" Height="20" VerticalAlignment="Top"/>
             <TextBox x:Name="namebox" Margin="160,20,362,0" Height="20" VerticalAlignment="Top"/>
-            <TextBox x:Name="phonebox" Margin="160,60,362,0" Height="20" VerticalAlignment="Top"  IsEnabled="True" IsReadOnly="False"/>
+            <TextBox x:Name="phonebox" Margin="160,60,362,0" Height="20" VerticalAlignment="Top"  IsEnabled="True" IsReadOnly="False" TextChanged="phonebox_TextChanged"/>
 
 
-            <TextBox  Margin="160,180,362,0" Height="20" VerticalAlignment="Top"/>
+            <TextBox x:Name="sas1"  Margin="160,180,362,0" Height="20" VerticalAlignment="Top"/>
 
             <Viewbox Height="24" HorizontalAlignment="Left" Width="105" VerticalAlignment="Top" Margin="50,63,0,0" Stretch="UniformToFill">
                 <Label  >

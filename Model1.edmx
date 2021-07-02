@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище Stas_bdModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище Stas_bdModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -39,7 +39,7 @@
           <Property Name="Отчество" Type="varchar" MaxLength="50" />
           <Property Name="Номер паспорта" Type="varchar" MaxLength="6" />
           <Property Name="Серия паспорта" Type="varchar" MaxLength="4" />
-          <Property Name="Телефон" Type="bigint" />
+          <Property Name="Телефон" Type="varchar" MaxLength="50" />
           <Property Name="Адрес" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Комплектация1">
@@ -205,8 +205,7 @@
             <End Role="Форма Оплаты" EntitySet="Форма Оплаты" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Stas_bdModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -225,14 +224,14 @@
             <PropertyRef Name="Код_Автомобиля" />
           </Key>
           <Property Name="Код_Автомобиля" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Код_поставщика" Type="Int32" />
           <Property Name="Марка_автомобиля" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Модель_автомобиля" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Кузов" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Дата_выпуска" Type="DateTime" Precision="3" />
-          <Property Name="Наличие" Type="Boolean" />
           <Property Name="Количество" Type="Int32" />
           <Property Name="цена" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Наличие" Type="Boolean" />
+          <Property Name="Код_поставщика" Type="Int32" />
           <NavigationProperty Name="Комплектация1" Relationship="Self.FK_автомобиль_Комплектация1" FromRole="автомобиль" ToRole="Комплектация1" />
           <NavigationProperty Name="Поставщик" Relationship="Self.FK_автомобиль_Поставщик" FromRole="автомобиль" ToRole="Поставщик" />
           <NavigationProperty Name="Продажа" Relationship="Self.FK_Продажа_автомобиль" FromRole="автомобиль" ToRole="Продажа" />

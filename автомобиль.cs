@@ -21,14 +21,14 @@ namespace Sklad
         }
     
         public int Код_Автомобиля { get; set; }
-        public Nullable<int> Код_поставщика { get; set; }
         public string Марка_автомобиля { get; set; }
         public string Модель_автомобиля { get; set; }
         public string Кузов { get; set; }
         public Nullable<System.DateTime> Дата_выпуска { get; set; }
-        public Nullable<bool> Наличие { get; set; }
         public Nullable<int> Количество { get; set; }
         public Nullable<decimal> цена { get; set; }
+        public Nullable<bool> Наличие { get; set; }
+        public Nullable<int> Код_поставщика { get; set; }
     
         public virtual Комплектация1 Комплектация1 { get; set; }
         public virtual Поставщик Поставщик { get; set; }

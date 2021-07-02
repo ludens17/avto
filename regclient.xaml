@@ -11,52 +11,65 @@
     <Grid>
         <Viewbox Height="24" HorizontalAlignment="Left" Width="110" VerticalAlignment="Top" Margin="40,23,0,0" Stretch="UniformToFill">
             <Label  >
-                <TextBlock Text="Название компании" Width="115" TextAlignment="Center"/>
+                <TextBlock Text="Фамилия" Width="115" TextAlignment="Center"/>
             </Label>
 
         </Viewbox>
 
-        <TextBox x:Name="innbox" Margin="160,140,362,0" Height="20" VerticalAlignment="Top"   TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="innbox" Margin="160,140,362,0" Height="20" VerticalAlignment="Top"   />
 
         <TextBox x:Name="addressbox" Margin="160,100,362,0" Height="20" VerticalAlignment="Top"/>
         <TextBox x:Name="namebox" Margin="160,20,362,0" Height="20" VerticalAlignment="Top"/>
-        <TextBox x:Name="phonebox" Margin="160,60,362,0" Height="20" VerticalAlignment="Top" TextChanged="phonebox_TextChanged" IsEnabled="True" IsReadOnly="False"/>
+        <TextBox x:Name="phonebox" Margin="160,60,362,0" Height="20" VerticalAlignment="Top"  IsEnabled="True" IsReadOnly="False"/>
 
 
-        <TextBox  Margin="160,180,362,0" Height="20" VerticalAlignment="Top"/>
+        <TextBox x:Name="sas" Margin="160,180,362,0" Height="20" VerticalAlignment="Top"/>
 
         <Viewbox Height="24" HorizontalAlignment="Left" Width="105" VerticalAlignment="Top" Margin="50,63,0,0" Stretch="UniformToFill">
             <Label  >
-                <TextBlock Text="Номер для связи" Width="115" TextAlignment="Center"/>
+                <TextBlock Text="Имя" Width="115" TextAlignment="Center"/>
             </Label>
 
         </Viewbox>
-        <Viewbox Height="24" HorizontalAlignment="Left" Width="120" VerticalAlignment="Top" Margin="35,103,0,0" Stretch="UniformToFill">
+        <Viewbox Height="24" HorizontalAlignment="Left" Width="120" VerticalAlignment="Top" Margin="40,100,0,0" Stretch="UniformToFill">
 
             <Label  >
-                <TextBlock Text="Юридический адрес"  TextAlignment="Center" Width="120"/>
+                <TextBlock Text="Отчество"  TextAlignment="Center" Width="120"/>
             </Label>
         </Viewbox>
 
-        <Viewbox Height="24" HorizontalAlignment="Left" Width="95" VerticalAlignment="Top" Margin="65,143,0,0">
+        <Viewbox Height="24" HorizontalAlignment="Left" Width="95" VerticalAlignment="Top" Margin="49,140,0,0">
             <Label >
                 <TextBlock 
-                Text="Номер ИНН" TextAlignment="Center"/>
+                Text="Номер паспорта" TextAlignment="Center"/>
             </Label>
 
         </Viewbox>
 
-        <Viewbox Margin="35,186,0,0" Height="20" HorizontalAlignment="Left" Width="120" VerticalAlignment="Top" Stretch="Fill">
+        <Viewbox Margin="30,169,0,0" Height="39" HorizontalAlignment="Left" Width="120" VerticalAlignment="Top" Stretch="Fill">
 
-            <Label>
-                <TextBlock Text="Адрес электронной почты"  TextAlignment="Center"></TextBlock>
+            <Label Height="31">
+                <TextBlock Text="Серия паспорта"  TextAlignment="Center" Height="21" Width="93"></TextBlock>
             </Label>
         </Viewbox >
-        <Button Margin="160,220,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" Click="Button_Click">
+        <Button Margin="160,314,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" Click="Button_Click">
             <Viewbox Height="20">
                 <TextBlock Text="Регистрация"></TextBlock>
             </Viewbox>
         </Button>
+        <TextBox Height="23" Margin="160,224,362,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" x:Name="ton"/>
+        <TextBox Height="23" Margin="160,272,362,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" x:Name="tan"/>
+        <Viewbox HorizontalAlignment="Left" Height="23" Margin="86,224,0,0" VerticalAlignment="Top" Width="58">
+            <Label>
+                <TextBlock Text="телефон" FontSize="20"></TextBlock>
+            </Label>
+
+        </Viewbox>
+        <Viewbox HorizontalAlignment="Left" Height="35" Margin="90,272,0,0" VerticalAlignment="Top" Width="65">
+            <Label FontSize="20" Height="37">
+                <TextBlock Text="Адрес" Height="37" Width="82" FontSize="20"></TextBlock>
+            </Label>
+        </Viewbox>
 
 
     </Grid>

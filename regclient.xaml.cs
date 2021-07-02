@@ -25,43 +25,7 @@ namespace Sklad
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (sender is TextBox textBox)
-            {
-                textBox.Text = new string
-                    (
-                         textBox
-                         .Text
-                         .Where
-                         (ch =>
-                            (ch >= '0' && ch <= '9')
-                         )
-                         .ToArray()
-                    );
-                textBox.SelectionStart = e.Changes.First().Offset + 1;
-                textBox.SelectionLength = 0;
-            }
-            innbox.MaxLength = 12;
-        }
-
-        private void phonebox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (sender is TextBox textBox)
-            {
-                textBox.Text = new string
-                    (
-                         textBox
-                         .Text
-                         .Where
-                         (ch =>
-                            ch == '+' || (ch >= '0' && ch <= '9')
-                         )
-                         .ToArray()
-                    );
-            }
-            phonebox.MaxLength = 18;
-        }
+        
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -69,14 +33,33 @@ namespace Sklad
             {
                 MessageBox.Show("Не все поля заполнены!", "Внимание", MessageBoxButton.OK);
             }
-           else 
-            {
-                if (innbox.Text.Length < 12)
+          
+
+
+                try
                 {
- MessageBox.Show("Неполный номер ИНН", "Внимание", MessageBoxButton.OK);
+                    string name = Convert.ToString(namebox.Text);
+                    string phone = Convert.ToString(phonebox.Text);
+                    string adres = Convert.ToString(addressbox.Text);
+                    string inn = Convert.ToString(innbox.Text);
+                    string mail = Convert.ToString(sas.Text);
+                    int govna = Convert.ToInt32(ton.Text);
+                    string dura = Convert.ToString(tan.Text);
+                    Dota sl = new Dota();
+                    sl.Select($@"INSERT INTO Клиент (Фамилия,Имя,Отчество,[Номер_паспорта],[Серия_паспорта],Телефон,Адрес) VALUES ('{name}', '{phone}','{adres}','{inn}','{mail}','{govna}','{dura}')");
+                    MainWindow.GetWindow(openpage.MainFrame).Title = "Оптовый склад->Клиенты";
+                    openpage.MainFrame.Navigate(new infoclient());
+
                 }
-                   
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Ошибка добавления данных", "обратитесь к разработчику", MessageBoxButton.OK);
+                }
+
+
+
             }
         }
     }
-}
+

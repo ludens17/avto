@@ -27,17 +27,20 @@ namespace Sklad
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+         
             try
             {
+                Dota sl = new Dota();
                 int stoim = Convert.ToInt32(hueta.Text);
                 string name = innbox.Text;
                 string ed = phonebox.Text;
                 int kol = Convert.ToInt32(kolihestvo.Text);
                 string pizda = addressbox.Text;
-
+                string noda = namebox.Text;
+                DateTime datakak = Convert.ToDateTime(innbox.Text);
                 int es = 1;
 
-                sl.Select($@"INSERT INTO товар ([кол-во],ЕдИзм,СтоимЗаЕд,наличие,Наименование) VALUES ('{kol}','{ed}','{stoim}', '{es}','{name}')");
+                sl.Select($@"INSERT INTO автомобиль(Марка_автомобиля, Модель_автомобиля, Кузов, Дата_выпуска,цена,Количество,Наличие) VALUES('{noda}', '{ed}', '{pizda}', '{name}', '{kol}', '{stoim}', '{es})");
                 stoim = 0;
                 name = null;
                 ed = null;
